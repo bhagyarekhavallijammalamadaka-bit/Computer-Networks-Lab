@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+struct Computer {
+    char name[10];
+    char ip[20];
+    char subnet[20];
+    char gateway[20];
+};
+
+int main() {
+    struct Computer pc[3] = {
+        {"PC1", "192.168.1.10", "255.255.255.0", "192.168.1.1"},
+        {"PC2", "192.168.1.11", "255.255.255.0", "192.168.1.1"},
+        {"PC3", "192.168.1.12", "255.255.255.0", "192.168.1.1"}
+    };
+
+    int i;
+
+    printf("COMPUTER NETWORKS LAB\n");
+    printf("LAN IP CONFIGURATION DETAILS\n");
+    printf("============================================\n");
+
+    for (i = 0; i < 3; i++) {
+        printf("\nComputer Name : %s\n", pc[i].name);
+        printf("IP Address    : %s\n", pc[i].ip);
+        printf("Subnet Mask   : %s\n", pc[i].subnet);
+        printf("Default Gateway: %s\n", pc[i].gateway);
+        printf("--------------------------------------------\n");
+    }
+
+    printf("\nNetwork Devices:\n");
+    printf("1. Hub\n");
+    printf("2. Switch\n");
+    printf("3. Router\n");
+    printf("4. Bridge\n");
+    printf("5. Repeater\n");
+    printf("6. Gateway\n");
+
+    printf("\nNote: The above IP addresses are examples.\n");
+    printf("Configure actual devices and test connectivity using ping.\n");
+
+    return 0;
+}
